@@ -1,0 +1,16 @@
+<%- include("F:\\programs\\udemy web dev\\Node Project\\blog app\\views\\partials\\header"); %>
+<div class="ui main text container">
+    <div class="ui huge header divided items">
+        <h1>BLOG POSTS ARE SHOWN HERE</h1>
+        <% blogs.forEach(function(blog){ %>
+    <div class="ui card">
+        <h2><%= blog.title %></h2>
+        <img src="<%= blog.image %>">
+        <h4><%= blog.created.toDateString() %></h4>
+        <a href="/blogs/<%= blog._id %>"><h4>Read More</h4></a>
+    </div>
+        <% });  %>
+    </div>
+</div>
+
+<%- include("F:\\programs\\udemy web dev\\Node Project\\blog app\\views\\partials\\footer"); %>
